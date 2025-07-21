@@ -1,177 +1,268 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 🎨 Variables globales */
 :root {
-    /* Colores principales */
+    /* Paleta refinada */
     --color-rosa-pastel: #FFD6E8;
     --color-lavanda: #E6D6FF;
     --color-azul-cielo: #A4D8FF;
-    --color-vainilla: #FFF7E6;
     --color-fucsia: #FF88BB;
     --color-morado: #7C73E6;
-    --color-blanco: #FFFFFF;
     --color-texto: #333333;
+    --color-claro: #FFFFFF;
 
-    /* Fuentes */
+    /* Tipografía */
     --fuente-principal: 'Fredoka', sans-serif;
     --fuente-secundaria: 'Quicksand', sans-serif;
 }
 
-/* Estilos globales */
 body {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-secundaria);
     background-color: var(--color-lavanda);
-    margin: 10px;
-    padding: 10px;
+    color: var(--color-texto);
 }
 
-/* Estilos al header */
 header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 140px;
-}
-
-header h1 {
-    color: var(--color-morado);
-    font-size: 50px;
-    text-shadow: var(--color-fucsia) 0px 0px 10px;
-}
-
-header p {
-    color: var(--color-fucsia);
-    font-size: 20px;
-    font-family: var(--fuente-secundaria);
-    text-shadow: var(--color-morado) 0px 0px 10px;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--color-rosa-pastel);
 }
 
 header img {
     height: 100px;
 }
 
-/* Estilos al Nav */
+.text-header h1 {
+    font-family: var(--fuente-principal);
+    font-size: 48px;
+    color: var(--color-morado);
+    text-shadow: 0 0 8px var(--color-fucsia);
+}
+
+.text-header p {
+    font-size: 18px;
+    color: var(--color-fucsia);
+    font-family: var(--fuente-secundaria);
+    text-shadow: 0 0 6px var(--color-morado);
+}
+
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     background-color: var(--color-lavanda);
+    padding: 10px 0;
 }
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-    align-items: center;
     list-style: none;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    gap: 30px;
     background-color: var(--color-rosa-pastel);
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
+nav a {
     text-decoration: none;
     color: var(--color-texto);
-    font-size: 20px;
     font-weight: bold;
+    font-size: 18px;
     font-family: var(--fuente-secundaria);
-    text-shadow: var(--color-fucsia) 0px 0px 10px;
+    text-shadow: 0 0 6px var(--color-fucsia);
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: var(--color-morado);
-    text-shadow: var(--color-fucsia) 0px 0px 10px;
 }
 
-/* Estilo a las section */
+.contenido {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+main {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+    background-color: var(--color-rosa-pastel);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin: 20px;
+    margin-bottom: 40px;
 }
 
 section h2 {
+    font-family: var(--fuente-principal);
+    font-size: 28px;
+    margin-bottom: 15px;
     color: var(--color-morado);
-    font-size: 30px;
-    text-shadow: var(--color-fucsia) 0px 0px 10px;
-    margin-bottom: 10px;
     text-align: center;
+    text-shadow: 0 0 6px var(--color-fucsia);
 }
 
-
-
-/* Estilos a la tabla */
+/* Tablas */
 table {
+    width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
+    background-color: var(--color-claro);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th,
 td {
+    padding: 12px;
     text-align: left;
-    padding: 8px;
 }
 
 th {
-    background-color: var(--color-rosa-pastel);
+    background-color: var(--color-azul-cielo);
     color: var(--color-morado);
 }
 
 td {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+tr:hover {
+    background-color: #f5f5f5;
 }
 
-/* Estilos al aside */
+/* Aside */
 aside {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    padding: 10px;
+    flex: 1;
+    background-color: var(--color-rosa-pastel);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
-
-/* Estilos al footer */
-footer {
+.tarjeta-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+}
+
+.tarjeta-info h3 {
+    font-size: 20px;
+    color: var(--color-morado);
+    border-bottom: 2px solid var(--color-morado);
+    padding-bottom: 5px;
+}
+
+.tarjeta-info ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.tarjeta-info p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.tarjeta-info iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+}
+
+/* Footer */
+footer {
     position: sticky;
     bottom: 0;
-    z-index: 1;
     background-color: var(--color-rosa-pastel);
+    padding: 10px;
+    text-align: center;
+    font-family: var(--fuente-secundaria);
+    font-size: 14px;
+    color: var(--color-texto);
+    text-shadow: 0 0 4px var(--color-fucsia);
 }
 
-footer p {
-    color: var(--color-texto);
-    font-size: 15px;
-    font-family: var(--fuente-secundaria);
-    text-shadow: var(--color-fucsia) 0px 0px 10px;
+/* 📱 Diseño responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    main,
+    aside {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    aside {
+        position: static;
+        margin-top: 20px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .text-header h1 {
+        font-size: 36px;
+    }
+
+    .text-header p {
+        font-size: 16px;
+    }
+
+    nav ul {
+        gap: 15px;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    table th,
+    table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .tarjeta-info iframe {
+        height: 150px;
+    }
+}
+
+/* Diseño hojas de productos */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
