@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleep Ice</title>
+    <title>Sleep Ice - Carta</title>
     <link rel="icon" type="image/png" sizes="64x64" href="img/logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,11 +12,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
+    <!-- Botón flotante para volver arriba con el logo -->
+    <a href="#inicio" class="btn-volver-arriba" title="Volver arriba">
+        <img src="img/logo.png" alt="Volver arriba" />
+    </a>
+
+    <!-- Encabezado principal con logo y título -->
+    <header id="inicio">
+        <a href="#inicio">
             <img src="img/logo.png" alt="Logo Sleep Ice" />
         </a>
         <div class="text-header">
@@ -25,150 +33,427 @@
         </div>
     </header>
 
+    <!-- Menú de navegación interno -->
     <nav>
         <ul>
-            <li><a href="helados.html">Helados</a></li>
-            <li><a href="ensaladas.html">Ensaladas</a></li>
-            <li><a href="postres.html">Postres</a></li>
-            <li><a href="bebidas.html">Bebidas</a></li>
+            <li><a href="#helados">Helados</a></li>
+            <li><a href="#ensaladas">Ensaladas</a></li>
+            <li><a href="#postres">Postres</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
         </ul>
     </nav>
 
-    <div class="contenido">
-        <main>
-            <section class="helados">
-                <h2>🍨 Helados</h2>
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                    </tr>
-                    <tr>
-                        <td>Helado de Chocolate Belga</td>
-                        <td>$120</td>
-                    </tr>
-                    <tr>
-                        <td>Helado de Vainilla Bourbon</td>
-                        <td>$120</td>
-                    </tr>
-                    <tr>
-                        <td>Helado de Fresa Natural</td>
-                        <td>$120</td>
-                    </tr>
-                    <tr>
-                        <td>Helado de Pistacho</td>
-                        <td>$140</td>
-                    </tr>
-                    <tr>
-                        <td>Helado de Dulce de Leche</td>
-                        <td>$130</td>
-                    </tr>
-                    <tr>
-                        <td>Helado de Mango</td>
-                        <td>$130</td>
-                    </tr>
-                </table>
-            </section>
+    <main class="productos d-flex flex-column align-items-center gap-5 p-4">
 
-            <section class="ensaladas">
-                <h2>🍓 Ensaladas de Frutas</h2>
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                    </tr>
-                    <tr>
-                        <td>Ensalada Tropical</td>
-                        <td>$110</td>
-                    </tr>
-                    <tr>
-                        <td>Ensalada de Manzana y Kiwi</td>
-                        <td>$110</td>
-                    </tr>
-                    <tr>
-                        <td>Ensalada de Frutos Rojos</td>
-                        <td>$120</td>
-                    </tr>
-                </table>
-            </section>
+        <!-- 🍨 Helados -->
+        <section id="helados">
+            <h2>🍨 Helados</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                <!-- === TARJETA 1: Chocolate Belga === -->
+                <input type="checkbox" id="modal-h1" class="modal-toggle">
+                <label for="modal-h1" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/h1.jpg" class="card-img-top" alt="Chocolate Belga">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Belga</h5>
+                        <p class="card-text">Cacao oscuro y cremoso con trozos de chocolate europeo.</p>
+                        <p class="card-price">$120</p>
+                        <span class="badge-nuevo">Nuevo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-h1" class="cerrar">✖</label>
+                    <img src="img/h1.jpg" alt="Chocolate Belga">
+                    <div class="contenido">
+                        <h3>Chocolate Belga</h3>
+                        <p>Una experiencia intensa y cremosa con cacao oscuro 70% y trozos reales de chocolate europeo.
+                        </p>
+                        <p>Ideal para verdaderos amantes del chocolate. Combínalo con galletas, nueces o salsa de
+                            caramelo.</p>
+                        <p class="card-price">$120</p>
+                    </div>
+                </div>
 
-            <section class="postres">
-                <h2>🍰 Postres</h2>
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                    </tr>
-                    <tr>
-                        <td>Brownie con Helado</td>
-                        <td>$150</td>
-                    </tr>
-                    <tr>
-                        <td>Banana Split</td>
-                        <td>$160</td>
-                    </tr>
-                    <tr>
-                        <td>Waffle con Helado</td>
-                        <td>$170</td>
-                    </tr>
-                    <tr>
-                        <td>Copa Sleep Ice</td>
-                        <td>$180</td>
-                    </tr>
-                </table>
-            </section>
+                <!-- === TARJETA 2: Vainilla Bourbon === -->
+                <input type="checkbox" id="modal-h2" class="modal-toggle">
+                <label for="modal-h2" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/h2.jpg" class="card-img-top" alt="Vainilla Bourbon">
+                    <div class="card-body">
+                        <h5 class="card-title">Vainilla Bourbon</h5>
+                        <p class="card-text">Vainilla auténtica con aroma dulce y textura sedosa.</p>
+                        <p class="card-price">$120</p>
+                        <span class="badge-promo">Promo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-h2" class="cerrar">✖</label>
+                    <img src="img/h2.jpg" alt="Vainilla Bourbon">
+                    <div class="contenido">
+                        <h3>Vainilla Bourbon</h3>
+                        <p>Clásico irresistible con vainilla natural y notas aromáticas de bourbon. Perfecto para
+                            quienes prefieren un sabor suave pero elegante.</p>
+                        <p>Ideal con frutas, sirope o galleta de canela.</p>
+                        <p class="card-price">$120</p>
+                    </div>
+                </div>
+                <!-- === TARJETA 3: Fresa Natural === -->
+                <input type="checkbox" id="modal-h3" class="modal-toggle">
+                <label for="modal-h3" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/h3.jpg" class="card-img-top" alt="Fresa Natural">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresa Natural</h5>
+                        <p class="card-text">Hecho con fresas frescas y un toque de crema artesanal.</p>
+                        <p class="card-price">$120</p>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-h3" class="cerrar">✖</label>
+                    <img src="img/h3.jpg" alt="Fresa Natural">
+                    <div class="contenido">
+                        <h3>Fresa Natural</h3>
+                        <p>Un clásico delicioso elaborado con fresas frescas seleccionadas y crema artesanal que resalta
+                            su sabor dulce y natural.</p>
+                        <p>Ideal para quienes disfrutan de un sabor frutal refrescante.</p>
+                        <p class="card-price">$120</p>
+                    </div>
+                </div>
 
-            <section class="bebidas">
-                <h2>🥤 Bebidas</h2>
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                    </tr>
-                    <tr>
-                        <td>Agua Mineral</td>
-                        <td>$60</td>
-                    </tr>
-                    <tr>
-                        <td>Refresco Natural de Limón</td>
-                        <td>$80</td>
-                    </tr>
-                    <tr>
-                        <td>Malteada de Chocolate</td>
-                        <td>$140</td>
-                    </tr>
-                    <tr>
-                        <td>Malteada de Fresa</td>
-                        <td>$140</td>
-                    </tr>
-                </table>
-            </section>
-        </main>
+                <!-- === TARJETA 4: Pistacho === -->
+                <input type="checkbox" id="modal-h4" class="modal-toggle">
+                <label for="modal-h4" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/h4.jpg" class="card-img-top" alt="Pistacho">
+                    <div class="card-body">
+                        <h5 class="card-title">Pistacho</h5>
+                        <p class="card-text">Helado cremoso con pistachos naturales tostados.</p>
+                        <p class="card-price">$140</p>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-h4" class="cerrar">✖</label>
+                    <img src="img/h4.jpg" alt="Pistacho">
+                    <div class="contenido">
+                        <h3>Pistacho</h3>
+                        <p>Una mezcla cremosa con pistachos reales tostados, para un sabor intenso, suave y lleno de
+                            textura.</p>
+                        <p>Perfecto para paladares curiosos y exigentes.</p>
+                        <p class="card-price">$140</p>
+                    </div>
+                </div>
 
-        <aside>
-            <div class="tarjeta-info">
-                <h3>🎁 Promociones</h3>
-                <ul>
-                    <li>2x1 en helados los miércoles</li>
-                    <li>10% de descuento en tu primera compra</li>
-                    <li>Combo Brownie + Malteada a $250</li>
-                    <li>2x1 en ensaladas los jueves</li>
-                </ul>
-                <h3>🕐 Horario</h3>
-                <p>Lunes a Domingo: 12:00 - 22:00 hrs</p>
-                <h3>📞 Contacto</h3>
-                <p>+56 9 1234 5678</p>
-                <p>+56 9 8765 4321</p>
-                <h3>📍 Ubicación</h3>
-                <p>Calle Ficticia 123, Ciudad Ejemplo</p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d932.2621186488791!2d-74.27543520280952!3d4.7304623327611885!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1753056871716!5m2!1ses-419!2sco"
-                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- === TARJETA 5: Dulce de Leche === -->
+                <input type="checkbox" id="modal-h5" class="modal-toggle">
+                <label for="modal-h5" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/h5.jpg" class="card-img-top" alt="Dulce de Leche">
+                    <div class="card-body">
+                        <h5 class="card-title">Dulce de Leche</h5>
+                        <p class="card-text">Receta tradicional con leche caramelizada y toques suaves.</p>
+                        <p class="card-price">$130</p>
+                        <span class="badge-promo">Promo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-h5" class="cerrar">✖</label>
+                    <img src="img/h5.jpg" alt="Dulce de Leche">
+                    <div class="contenido">
+                        <h3>Dulce de Leche</h3>
+                        <p>Una receta dulce y cremosa de leche caramelizada con un toque tradicional. Sabor profundo y
+                            nostálgico.</p>
+                        <p>Combínalo con nueces o coco rallado para un toque especial.</p>
+                        <p class="card-price">$130</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA 6: Mango Tropical === -->
+                <input type="checkbox" id="modal-h6" class="modal-toggle">
+                <label for="modal-h6" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/h6.jpg" class="card-img-top" alt="Mango Tropical">
+                    <div class="card-body">
+                        <h5 class="card-title">Mango Tropical</h5>
+                        <p class="card-text">Refrescante y frutal, con mango maduro 100% natural.</p>
+                        <p class="card-price">$130</p>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-h6" class="cerrar">✖</label>
+                    <img src="img/h6.jpg" alt="Mango Tropical">
+                    <div class="contenido">
+                        <h3>Mango Tropical</h3>
+                        <p>Exquisito helado hecho con mango colombiano maduro. Refrescante y naturalmente dulce,
+                            perfecto para días calurosos.</p>
+                        <p>Ideal solo o acompañado de frutas frescas.</p>
+                        <p class="card-price">$130</p>
+                    </div>
+                </div>
             </div>
-        </aside>
-    </div>
+        </section>
 
+        <!-- 🍓 Ensaladas -->
+        <section id="ensaladas">
+            <h2>🍓 Ensaladas</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                <!-- === TARJETA E1: Ensalada Tropical === -->
+                <input type="checkbox" id="modal-e1" class="modal-toggle">
+                <label for="modal-e1" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/e1.jpg" class="card-img-top" alt="Ensalada Tropical">
+                    <div class="card-body">
+                        <h5 class="card-title">Ensalada Tropical</h5>
+                        <p class="card-text">Mezcla de piña, mango, fresa y papaya con yogurt natural.</p>
+                        <p class="card-price">$110</p>
+                        <span class="badge-nuevo">Nuevo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-e1" class="cerrar">✖</label>
+                    <img src="img/e1.jpg" alt="Ensalada Tropical">
+                    <div class="contenido">
+                        <h3>Ensalada Tropical</h3>
+                        <p>Una mezcla colorida de frutas tropicales como piña, mango, fresa y papaya. Servida con yogurt
+                            natural y un toque de miel.</p>
+                        <p>Refrescante, nutritiva y perfecta como snack o postre ligero.</p>
+                        <p class="card-price">$110</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA E2: Manzana y Kiwi === -->
+                <input type="checkbox" id="modal-e2" class="modal-toggle">
+                <label for="modal-e2" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/e2.jpg" class="card-img-top" alt="Manzana y Kiwi">
+                    <div class="card-body">
+                        <h5 class="card-title">Manzana y Kiwi</h5>
+                        <p class="card-text">Rodajas de manzana verde y kiwi con toque de miel y chía.</p>
+                        <p class="card-price">$110</p>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-e2" class="cerrar">✖</label>
+                    <img src="img/e2.jpg" alt="Manzana y Kiwi">
+                    <div class="contenido">
+                        <h3>Manzana y Kiwi</h3>
+                        <p>Una ensalada fresca y ligera con rodajas de manzana verde crujiente y kiwi ácido, bañadas en
+                            miel con un toque de semillas de chía.</p>
+                        <p>Ideal para cuidar tu digestión sin dejar de disfrutar.</p>
+                        <p class="card-price">$110</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA E3: Frutos Rojos === -->
+                <input type="checkbox" id="modal-e3" class="modal-toggle">
+                <label for="modal-e3" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/e3.jpg" class="card-img-top" alt="Frutos Rojos">
+                    <div class="card-body">
+                        <h5 class="card-title">Frutos Rojos</h5>
+                        <p class="card-text">Fresas, moras y arándanos con crema ligera y granola artesanal.</p>
+                        <p class="card-price">$120</p>
+                        <span class="badge-promo">Promo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-e3" class="cerrar">✖</label>
+                    <img src="img/e3.jpg" alt="Frutos Rojos">
+                    <div class="contenido">
+                        <h3>Frutos Rojos</h3>
+                        <p>Fresas, moras y arándanos mezclados con crema ligera. Coronado con granola artesanal para una
+                            textura crujiente y sabrosa.</p>
+                        <p>Perfecta para los fans de los sabores dulces con un toque ácido.</p>
+                        <p class="card-price">$120</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🍰 Postres -->
+        <section id="postres">
+            <h2>🍰 Postres</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                <!-- === TARJETA P1: Brownie con Helado === -->
+                <input type="checkbox" id="modal-p1" class="modal-toggle">
+                <label for="modal-p1" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/p1.jpg" class="card-img-top" alt="Brownie con Helado">
+                    <div class="card-body">
+                        <h5 class="card-title">Brownie con Helado</h5>
+                        <p class="card-text">Brownie tibio con bola de helado y salsa de chocolate.</p>
+                        <p class="card-price">$150</p>
+                        <span class="badge-promo">Promo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-p1" class="cerrar">✖</label>
+                    <img src="img/p1.jpg" alt="Brownie con Helado">
+                    <div class="contenido">
+                        <h3>Brownie con Helado</h3>
+                        <p>Brownie tibio recién horneado acompañado de una bola de helado Sleep Ice a elección y salsa
+                            de chocolate caliente.</p>
+                        <p>Una mezcla de texturas y temperaturas para los más golosos.</p>
+                        <p class="card-price">$150</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA P2: Banana Split === -->
+                <input type="checkbox" id="modal-p2" class="modal-toggle">
+                <label for="modal-p2" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/p2.jpg" class="card-img-top" alt="Banana Split">
+                    <div class="card-body">
+                        <h5 class="card-title">Banana Split</h5>
+                        <p class="card-text">Tres bolas de helado con banana fresca, crema y toppings.</p>
+                        <p class="card-price">$160</p>
+                        <span class="badge-nuevo">Nuevo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-p2" class="cerrar">✖</label>
+                    <img src="img/p2.jpg" alt="Banana Split">
+                    <div class="contenido">
+                        <h3>Banana Split</h3>
+                        <p>El clásico banana split con tres bolas de helado, banana fresca, crema batida, sirope y
+                            cerezas. Una fiesta en cada cucharada.</p>
+                        <p class="card-price">$160</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA P3: Waffle con Helado === -->
+                <input type="checkbox" id="modal-p3" class="modal-toggle">
+                <label for="modal-p3" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/p3.jpg" class="card-img-top" alt="Waffle con Helado">
+                    <div class="card-body">
+                        <h5 class="card-title">Waffle con Helado</h5>
+                        <p class="card-text">Waffle crujiente con helado, frutas frescas y miel.</p>
+                        <p class="card-price">$170</p>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-p3" class="cerrar">✖</label>
+                    <img src="img/p3.jpg" alt="Waffle con Helado">
+                    <div class="contenido">
+                        <h3>Waffle con Helado</h3>
+                        <p>Waffle recién hecho con helado Sleep Ice a tu gusto, frutas frescas como fresa y banano, y
+                            sirope de miel.</p>
+                        <p>Perfecto para compartir o darte un gusto completo.</p>
+                        <p class="card-price">$170</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA P4: Copa Sleep Ice === -->
+                <input type="checkbox" id="modal-p4" class="modal-toggle">
+                <label for="modal-p4" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/p4.jpg" class="card-img-top" alt="Copa Sleep Ice">
+                    <div class="card-body">
+                        <h5 class="card-title">Copa Sleep Ice</h5>
+                        <p class="card-text">Nuestra copa estrella con helados, toppings, frutas y magia.</p>
+                        <p class="card-price">$180</p>
+                        <span class="badge-nuevo">Nuevo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-p4" class="cerrar">✖</label>
+                    <img src="img/p4.jpg" alt="Copa Sleep Ice">
+                    <div class="contenido">
+                        <h3>Copa Sleep Ice</h3>
+                        <p>Una creación única de Sleep Ice: varias capas de helado, frutas frescas, siropes, galletas y
+                            un toque de magia pastel para cerrar con broche de oro.</p>
+                        <p>Ideal para los que lo quieren TODO en un solo postre.</p>
+                        <p class="card-price">$180</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🥤 Bebidas -->
+        <section id="bebidas">
+            <h2>🥤 Bebidas</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                <!-- === TARJETA B1: Agua Mineral === -->
+                <input type="checkbox" id="modal-b1" class="modal-toggle">
+                <label for="modal-b1" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/b1.jpg" class="card-img-top" alt="Agua Mineral">
+                    <div class="card-body">
+                        <h5 class="card-title">Agua Mineral</h5>
+                        <p class="card-text">Refrescante y ligera, ideal para acompañar tus postres.</p>
+                        <p class="card-price">$60</p>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-b1" class="cerrar">✖</label>
+                    <img src="img/b1.jpg" alt="Agua Mineral">
+                    <div class="contenido">
+                        <h3>Agua Mineral</h3>
+                        <p>Agua purificada con burbujas suaves, perfecta para hidratarte y equilibrar sabores dulces.
+                        </p>
+                        <p>Ideal para limpiar el paladar entre bocados o refrescarte sin azúcar.</p>
+                        <p class="card-price">$60</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA B2: Refresco Natural de Limón === -->
+                <input type="checkbox" id="modal-b2" class="modal-toggle">
+                <label for="modal-b2" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/b2.jpg" class="card-img-top" alt="Refresco de Limón">
+                    <div class="card-body">
+                        <h5 class="card-title">Refresco de Limón</h5>
+                        <p class="card-text">Limón exprimido con agua fría y toque de panela.</p>
+                        <p class="card-price">$75</p>
+                        <span class="badge-promo">Promo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-b2" class="cerrar">✖</label>
+                    <img src="img/b2.jpg" alt="Refresco de Limón">
+                    <div class="contenido">
+                        <h3>Refresco Natural de Limón</h3>
+                        <p>Bebida casera de limón natural con agua fría y endulzada suavemente con panela.</p>
+                        <p>Refrescante, ácida y perfecta para acompañar cualquier sabor tropical.</p>
+                        <p class="card-price">$75</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA B3: Malteada de Chocolate === -->
+                <input type="checkbox" id="modal-b3" class="modal-toggle">
+                <label for="modal-b3" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/b3.jpg" class="card-img-top" alt="Malteada de Chocolate">
+                    <div class="card-body">
+                        <h5 class="card-title">Malteada de Chocolate</h5>
+                        <p class="card-text">Chocolate Sleep Ice, leche y crema espesa batida.</p>
+                        <p class="card-price">$130</p>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-b3" class="cerrar">✖</label>
+                    <img src="img/b3.jpg" alt="Malteada de Chocolate">
+                    <div class="contenido">
+                        <h3>Malteada de Chocolate</h3>
+                        <p>Nuestra malteada estrella con helado de chocolate Sleep Ice, leche fría y crema batida.
+                            Espesa, dulce y totalmente irresistible.</p>
+                        <p>Perfecta para un antojo indulgente o como postre en vaso.</p>
+                        <p class="card-price">$130</p>
+                    </div>
+                </div>
+
+                <!-- === TARJETA B4: Malteada de Fresa === -->
+                <input type="checkbox" id="modal-b4" class="modal-toggle">
+                <label for="modal-b4" class="card card-trigger" style="width: 18rem; position: relative;">
+                    <img src="img/b4.jpg" class="card-img-top" alt="Malteada de Fresa">
+                    <div class="card-body">
+                        <h5 class="card-title">Malteada de Fresa</h5>
+                        <p class="card-text">Helado de fresa, leche fría y toque de vainilla.</p>
+                        <p class="card-price">$130</p>
+                        <span class="badge-nuevo">Nuevo</span>
+                    </div>
+                </label>
+                <div class="card-modal">
+                    <label for="modal-b4" class="cerrar">✖</label>
+                    <img src="img/b4.jpg" alt="Malteada de Fresa">
+                    <div class="contenido">
+                        <h3>Malteada de Fresa</h3>
+                        <p>Una bebida cremosa y frutal hecha con helado de fresa Sleep Ice, leche fría y un toque de
+                            vainilla para realzar el sabor.</p>
+                        <p>Dulce, refrescante y súper cremosa.</p>
+                        <p class="card-price">$130</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2025 Sleep Ice. Todos los derechos reservados.</p>
     </footer>
